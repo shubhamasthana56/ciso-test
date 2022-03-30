@@ -2,9 +2,10 @@ import React, { useContext } from 'react';
 import {ThemeContext} from '../../App';
 
 const Child2 = ()=> {
-    const {toggleTheme} = useContext(ThemeContext);
+    const {themeState, toggleTheme} = useContext(ThemeContext);
     const handleClick = ()=> {
-        toggleTheme()
+        console.log(toggleTheme)
+        toggleTheme();
     }
     //console.log(context);
     return (

@@ -8,12 +8,15 @@ const App = ()=> {
   const [themeState, setThemeState ]= useState(true);
   
   const toggleTheme = ()=> {
-    console.log('Invoked')
+    console.log('Invoked', themeState);
     setThemeState(!themeState);
   }
+  const background = themeState ? 'blue' : 'red';
   return (
-    <div>{themeState}
-     <ThemeContext.Provider value={themeState, toggleTheme}>
+     
+    <div style={{backgroundColor: background}} >
+
+     <ThemeContext.Provider value={{themeState, toggleTheme}}>
      <Child1/>
      </ThemeContext.Provider>
       
